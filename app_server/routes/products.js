@@ -1,16 +1,22 @@
-var express = require('express');
+var express = require("express");
 var router = express.Router();
 
-
-// /* GET users listing. */
+const ProductController = require("../controller/product");
+/* GET users listing. */
 // router.get('/', function(req, res, next) {
-//   res.send('respond dari PRODUCT router');
+//   res.send('respond dari CATEGORY router');
 // });
 
-router.post('path', (req, res) => {
-    res.status(201).json({
-        message : "Data berhasil disimpan"
-    });
-});
+//insert
+router.post("/", ProductController.createProduct);
+
+//select
+router.get("/", ProductController.readProduct);
+
+//delete
+router.delete("/:kdProduct", ProductController.deleteProduct);
+
+//update
+router.put("/:kdProduct", ProductController.updateProduct);
 
 module.exports = router;

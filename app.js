@@ -7,7 +7,7 @@ var logger = require("morgan");
 var indexRouter = require("./app_server/routes/index");
 //var usersRouter = require("./app_server/routes/users");
 var categoriesRouter = require("./app_server/routes/categories");
-//var productsRouter = require("./app_server/routes/products");
+var productsRouter = require("./app_server/routes/products");
 var brandsRouter = require("./app_server/routes/brands");
 
 const mongoose = require("mongoose");
@@ -69,7 +69,7 @@ app.use(express.static(path.join(__dirname, "public")));
 
 app.use("/", indexRouter);
 //app.use("/users", usersRouter);
-//app.use("/product", productsRouter);
+app.use("/product", productsRouter);
 app.use("/category", categoriesRouter);
 app.use("/brand", brandsRouter);
 
