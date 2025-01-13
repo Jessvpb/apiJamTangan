@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "start-dev": "nodemon .bin/www",
+    "postinstall": "npm rebuild bcrypt --build-from-source",
     "start": "node ./bin/www"
   },
   "dependencies": {
