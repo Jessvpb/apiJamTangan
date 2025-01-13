@@ -47,14 +47,14 @@ const createProduct = (req, res) => {
         .catch((err) => {
           res.status(500).json({
             message: "Internal server error: Gagal menyimpan produk",
-            error: err,
+            //error: err,
           });
         });
     })
     .catch((err) => {
       res.status(500).json({
         message: "Internal server error: Gagal menghitung produk",
-        error: err,
+        //error: err,
       });
     });
 };
@@ -71,7 +71,7 @@ const readProduct = (req, res) => {
     .catch((err) => {
       res.status(500).json({
         message: "Gagal mengambil data produk",
-        error: err.message,
+        //error: err.message,
       });
     });
 };
@@ -96,7 +96,7 @@ const deleteProduct = (req, res) => {
     .catch((err) => {
       res.status(500).json({
         message: "agal menghapus produk",
-        error: err.message,
+        //error: err.message,
       });
     });
 };
@@ -137,7 +137,7 @@ const updateProduct = (req, res) => {
     .catch((err) => {
       res.status(500).json({
         message: "Gagal mengupdate produk",
-        error: err,
+        //error: err,
       });
     });
 };

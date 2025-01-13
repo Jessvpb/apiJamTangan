@@ -27,7 +27,7 @@ const createCategory = (req, res) => {
     .catch((err) => {
       res.status(500).json({
         message: "Gagal menyimpan kategori",
-        error: err.message,
+        //error: err.message,
       });
     });
 };
@@ -44,7 +44,7 @@ const readCategory = (req, res) => {
     .catch((err) => {
       res.status(500).json({
         message: "Gagal mengambil data kategori",
-        error: err.message,
+        //error: err.message,
       });
     });
 };
@@ -69,7 +69,7 @@ const deleteCategory = (req, res) => {
     .catch((err) => {
       res.status(500).json({
         message: "Gagal menghapus kategori",
-        error: err.message,
+        //error: err.message,
       });
     });
 };
@@ -107,7 +107,7 @@ const updateCategory = (req, res) => {
     .catch((err) => {
       res.status(500).json({
         message: "Gagal memperbarui kategori",
-        error: err.message,
+        //error: err.message,
       });
     });
 };
